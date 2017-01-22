@@ -1,3 +1,8 @@
 Question 1: Rodentia, Rodentia, Rodentia, Macroscelidea, Rodentia
 
 Question 2: there are 28 uniq families
+
+Question 3: refer to the screenshot
+
+Question 4: 10th largest: Cetartiodactyla Balaenidae Eubalaena Eubalaena glacialis
+            10th smallest: Chiroptera Vespertilionidae Pipistrellus Pipistrellus nanulus

@@ -21,6 +21,6 @@ Question 8:
 	a). grep "of" haiku.txt
 	b). counting all the lines in the file with .dat, and sorting by number
 	c). grep -v "temp" $(find /data -name '*ose.dat')
-	d). grep -w $1 -r $2 | cut -d : -f 2 | cut -d, -f 1,3 > $1.txt
+	d). grep -w $1 -r $2 | cut -d, -f 1,3 | cut -d : -f 2 > $1.txt
 	e). grep four\.t\sisters LittleWomen.txt to bring up
 	f). $find ./ -type f -mtime -1 -user ahmed

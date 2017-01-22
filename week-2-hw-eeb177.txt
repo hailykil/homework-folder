@@ -6,3 +6,11 @@ Question 3: refer to the screenshot
 
 Question 4: 10th largest: Cetartiodactyla Balaenidae Eubalaena Eubalaena glacialis
             10th smallest: Chiroptera Vespertilionidae Pipistrellus Pipistrellus nanulus
+
+Question 5: refer to the screenshot
+
+Question 6:
+	a). size: 533 kb
+	b). 21 contig
+	c). 43 isogroups
+	d). contig 00329; numreads: 995

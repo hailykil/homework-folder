@@ -1,0 +1,22 @@
+1. Starting from /Users/amanda/data, which of the following commands could Amanda use to navigate to her home directory?
+	a. cd ~
+	b. cd ~/data/..
+	c. cd
+	d. cd ..
+
+
+2. Using the filesystem diagram below, if pwd displays /Users/things, what will ls ../backup display?
+	a. ../backup refers to /Users/backup
+
+
+3. Assuming a directory structure as in the above figure, if pwd displays /Users/backup, and -r tells ls to display things in reverse order, what command will display pnas_sub/ pnas_final/ original/ ?
+	a. ls -r -F
+	b. ls -r -F /Users/backup
+
+
+4. What does the command ls do when used with the -l and -h argument?
+	a. the -l arguments makes ls use a long listing format, showing not only the file/	 	    directory names but also additional informaiton such as the file size and the time of 	    its last modification. the -h argument makes the file size "human readable"
+
+
+5. The command ls -R list the contents of directories recursively. The command ls -t lists things by time of last change, with most recently changed files or directories first. In what order does ls -R -t display things?
+	a. The directories are listed alphabetically at each level, the files/directories in each 	     directory are sorted by time of last change. 

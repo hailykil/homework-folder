@@ -14,3 +14,5 @@ Question 6:
 	b). 21 contig
 	c). 43 isogroups
 	d). contig 00302; numreads: 3330
+
+Question 7: cp n{1..59}.txt ../../sandbox/temp

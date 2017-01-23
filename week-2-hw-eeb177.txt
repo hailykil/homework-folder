@@ -1,6 +1,28 @@
 Question 1: Rodentia, Rodentia, Rodentia, Macroscelidea, Rodentia
 
 Question 2: there are 28 uniq families
+		Dermoptera
+		Didelphimorphia
+		Diprotodontia
+		Eulipotyphla
+		Eulyplotiphla
+		Hyracoidea
+		Lagomorpha
+		Macroscelidea
+		Microbiotheria
+		Monotremata
+		Notoryctemorphia
+		Paucituberculata
+		Peramelemorphia
+		Perissodactyla
+		Pholidota
+		Pilosa
+		Primates
+		Proboscidea
+		Rodentia
+		Scandentia
+		Sirenia
+		Tubulidentata
 
 Question 3: refer to the screenshot
 

@@ -1,6 +1,35 @@
-1.11.2 Hormone levels in baboons - Gesquiere, et al. 2011
-	1. individual 3 recorded 61 times, individual 27 recorded 5 times.
-	2. 
-	3. 
+Question 1.11.2 Hormone levels in baboons - Gesquiere, et al. 2011
 
-1.11.3
+1. individual 3 recorded 61 times, individual 27 recorded 5 times.
+
+2. #! /bin/bash
+bash count_baboons.sh ../data/Gesquiere2011_data.csv 27
+
+3. #! /bin/bash
+tail -n +2 ../data/Gesquiere2011_data.csv | cut -f 1 | sort -n | uniq
+myIDS=`tail -n +2 ../data/Gesquiere2011_data.csv | cut -f 1 | sort -n | uniq`
+for id in $myIDS
+do
+    mycounts=`bash count_baboons.sh ../data/Gesquiere2011_data.csv $id`
+    echo "ID:" $id "counts:" $mycounts
+done 
+bash count_all_baboons.sh
+
+
+
+
+Question 1.11.3 Plant-pollinator networks - Saavedra & Stouffer 2013
+
+1. #! /bin/bash
+wc -l ../data/Saavedra2013/n10.txt 
+cat ../data/Saavedra2013/n10.txt | wc -l
+head -n 1 ../data/Saavedra2013/n10.txt | tr -d ' ' | wc -c
+
+2. FILES=../data/Saavedra2013/*.txt
+for f in $FILES
+do
+    echo $f
+done
+
+3. rows: bash netsize_all.sh | sort -n -r -k 3 | head -n 1
+column: bash netsize_all.sh | sort -n -r -k 2 | head -n 1

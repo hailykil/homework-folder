@@ -1,0 +1,15 @@
+My Favorite Fish
+
+Name: Common carp
+Science name: Cyprinus carpio
+
+Max length: 120 cm
+
+curl -s "http://www.fishbase.us/summary/SpeciesSummary.php?ID=1450&AT=carp" | grep "Max length"
+					Maturity: L<sub>m</sub> <a href=../Reproduction/MaturityList.php?ID=1450>34.9</a>, range 25 -  36 cm<BR /> Max length : 120 cm TL male/unsexed; (Ref. <A href='../references/FBRefSummary.php?ID=27549'>27549</A>); common length : 31.0 cm TL male/unsexed; (Ref. <A href='../references/FBRefSummary.php?ID=3561'>3561</A>); max. published weight: 40.1 kg (Ref. <A href='../references/FBRefSummary.php?ID=72380'>72380</A>); max. reported age: 38 years (Ref. <A href='../references/FBRefSummary.php?ID=72479'>72479</A>)	</span>
+
+Fisheries: highly commercial					
+curl -s "http://www.fishbase.us/summary/SpeciesSummary.php?ID=1450&AT=carp" | grep Fisheries: | cut -d ';' -f 1
+					Fisheries: highly commercial
+
+

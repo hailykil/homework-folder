@@ -1,0 +1,25 @@
+---
+title: "classwork-3-7"
+author: "Haily Kil"
+date: "March 7, 2017"
+output: html_document
+---
+```{r}
+install.packages("paleotree")
+install.packages("paleobioDB")
+
+
+library(paleotree)
+data(graptPBDB)
+head(graptOccPBDB)
+
+occSpecies <- taxonSortPBDBocc(graptOccPBDB, rank = "species")
+plotOccData(occSpecies)
+
+occGenus <- taxonSortPBDBocc(graptOccPBDB, rank = "genus")
+plotOccData(occGenus)
+
+data(retiolitinae)
+taxicDivDisc(retioRanges)
+
+```

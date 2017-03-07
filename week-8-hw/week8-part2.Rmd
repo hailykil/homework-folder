@@ -1,0 +1,34 @@
+---
+title: "week8-part2"
+author: "Haily Kil"
+date: "March 6, 2017"
+output: html_document
+---
+```{r}
+library(ggplot2)
+setwd("/home/eeb177-student/Desktop/eeb-177/homework-folder/week-8-hw/")
+felis <- read.csv("/home/eeb177-student/Desktop/eeb-177/homework-folder/week-8-hw/felis_3.csv", header = F, as.is = T)
+names(felis) <- c("occurrence_no", "record_type", "reid_no", "flags", "collection_no", "accepted_name", "accepted_rank", "accepted_no", "early_interval", "late_interval", "max_ma", "min_ma")
+head(felis)
+
+felis_occ <- ggplot(felis, aes(accepted_name, ymax =max_ma, ymin=min_ma), color = accepted_rank)
+felis_occ <- felis_occ + geom_linerange()
+felis_occ
+```
+
+```{r}
+felis_occ <- felis_occ + theme(legend.position="none")
+felis_occ
+felis_occ <- felis_occ + coord_flip()
+felis_occ
+felis_occ <- felis_occ +  theme(axis.text.y = element_text(size=3))
+felis_occ
+felis_occ <- felis_occ + theme(axis.ticks.y=element_blank())
+felis_occ
+felis_occ <- felis_occ + scale_y_continuous(limits=c(0, 40), expand = c(0, 0), breaks=c(0, 10, 20, 30, 40))
+felis_occ
+felis_occ <- felis_occ + labs(title = "Felis Fossil Occurrences", x = "Species", y = "Ma ago") + theme(plot.title = element_text(hjust = 0.5, size=22, face = "bold"), axis.title =element_text(size=20))
+felis_occ
+ggsave(filename = "felis-occ.pdf", plot = felis_occ)
+
+```

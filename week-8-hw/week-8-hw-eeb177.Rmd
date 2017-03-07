@@ -1,0 +1,23 @@
+---
+title: "week-8-hw"
+author: "Haily Kil"
+date: "March 6, 2017"
+output: html_document
+---
+```{r}
+dat <- read.csv("~/Desktop/eeb-177/homework-folder/week-8-hw/canids_1.csv")
+head(dat)
+library("ggrepel")
+p2 <- ggplot(dat, aes(x = accepted_name, y = occurrence_no, size = min_ma)) + geom_point()
+p2 + geom_point(aes(size = 2), color="blue")
+
+p3 <- ggplot(dat, aes(x = min_ma, y = max_ma)) + geom_point()
+
+p3 + geom_point(aes(size = 2))
+```
+
+#canids
+#uniq species = 211
+#uniq genera = 614?
+#4. what species has the longest... what?
+

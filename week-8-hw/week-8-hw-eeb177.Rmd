@@ -4,16 +4,33 @@ author: "Haily Kil"
 date: "March 6, 2017"
 output: html_document
 ---
+
 ```{r}
-dat <- read.csv("~/Desktop/eeb-177/homework-folder/week-8-hw/canids_1.csv")
-head(dat)
-library("ggrepel")
-p2 <- ggplot(dat, aes(x = accepted_name, y = occurrence_no, size = min_ma)) + geom_point()
-p2 + geom_point(aes(size = 2), color="blue")
+library(ggplot2)
+setwd("/home/eeb177-student/Desktop/eeb-177/homework-folder/week-8-hw/")
+canid <- read.csv("/home/eeb177-student/Desktop/eeb-177/homework-folder/week-8-hw/canids_3.csv", header = F, as.is = T)
+names(canid) <- c("occurrence_no", "record_type", "reid_no", "flags", "collection_no", "accepted_name", "accepted_rank", "accepted_no", "early_interval", "late_interval", "max_ma", "min_ma")
+head(canid)
 
-p3 <- ggplot(dat, aes(x = min_ma, y = max_ma)) + geom_point()
+canid_occ <- ggplot(canid, aes(accepted_name, ymax =max_ma, ymin=min_ma), color = accepted_rank)
+canid_occ <- canid_occ + geom_linerange()
+canid_occ
+```
 
-p3 + geom_point(aes(size = 2))
+
+```{r}
+canid_occ <- canid_occ + theme(legend.position="none")
+canid_occ
+canid_occ <- canid_occ + coord_flip()
+canid_occ
+canid_occ <- canid_occ +  theme(axis.text.y = element_text(size=3))
+canid_occ
+canid_occ <- canid_occ + theme(axis.ticks.y=element_blank())
+canid_occ
+canid_occ <- canid_occ + scale_y_continuous(limits=c(0, 40), expand = c(0, 0), breaks=c(0, 10, 20, 30, 40))
+canid_occ
+canid_occ <- canid_occ + labs(title = "Canid Fossil Occurrences", x = "Species", y = "Ma ago") + theme(plot.title = element_text(hjust = 0.5, size=22, face = "bold"), axis.title =element_text(size=20))
+canid_occ
 ```
 
 #canids
